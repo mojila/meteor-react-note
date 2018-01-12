@@ -43,10 +43,10 @@ export class Editor extends React.Component {
     if (this.props.note) {
       return (
         <div className="editor">
-          <input className="editor__title" value={this.state.title} placeholder="Untitled Note" onChange={this.handleTitleChange.bind(this)}/>
-          <textarea className="editor__body" value={this.state.body} placeholder="Your note here" onChange={this.handleBodyChange.bind(this)}></textarea>
+          <input className="editor__title" value={this.state.title} placeholder="Judul Note" onChange={this.handleTitleChange.bind(this)}/>
+          <textarea className="editor__body" value={this.state.body} placeholder="Isi Catatan" onChange={this.handleBodyChange.bind(this)}></textarea>
           <div>
-            <button className="button button--secondary" onClick={this.handleRemoval.bind(this)}>Delete Note</button>
+            <button className="button button--secondary" onClick={this.handleRemoval.bind(this)}>Hapus Catatan</button>
           </div>
         </div>
       );
@@ -54,7 +54,7 @@ export class Editor extends React.Component {
       return (
         <div className="editor">
           <p className="editor__message">
-            { this.props.selectedNoteId ? 'Note not found.' : 'Pick or create a note to get started.'}
+            { this.props.selectedNoteId ? 'Tidak ada catatan.' : 'Pilih atau Buat Catatan untuk memulai.'}
           </p>
         </div>
       );
